@@ -11,7 +11,7 @@
 
 
 
-<title>Blog</title>
+<title>Example 1</title>
 
 <script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -249,7 +249,7 @@ $(document).ready(function () {
   <a href="about.html">About</a>
 </li>
 <li>
-  <a href="Blog.html">Blog</a>
+  <a href="example1.html">Example 1</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -263,17 +263,72 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Blog</h1>
+<h1 class="title toc-ignore">Example 1</h1>
 
 </div>
 
 
-<div id="blog-posts" class="section level2">
-<h2>Blog Posts</h2>
+<head>
+<meta charset="UTF-8">
+<title>
+Lesson 1: Paired t-test
+</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+<h1>
+Lesson 1: Paired t-test in R
+</h1>
+<nav>
+<a href="index.html">Home</a>
+</nav>
+</header>
+<main>
+<h2>
+Introduction
+</h2>
+<p>
+The paired t-test is used to compare the means of two related groups.
+For example, measurements before and after a treatment on the same
+subjects.
+</p>
+<h2>
+R Example
+</h2>
+<p>
+Here’s a simple paired t-test in R:
+</p>
+<pre><code># Sample data
+before <- c(5, 6, 7, 6, 5)
+after  <- c(6, 7, 8, 7, 6)
+
+# Perform paired t-test
+t.test(before, after, paired = TRUE)</code></pre>
+<h2>
+Explanation
+</h2>
 <ul>
-<li>Coming soon…</li>
+<li>
+<strong>before</strong>: measurements before intervention
+</li>
+<li>
+<strong>after</strong>: measurements after intervention
+</li>
+<li>
+<strong>paired = TRUE</strong>: tells R the two samples are related
+</li>
 </ul>
-</div>
+<h2>
+Interpretation
+</h2>
+<p>
+Check the p-value from the output. If p &lt; 0.05, there is a
+significant difference between the two groups.
+</p>
+</main>
+</body>
+</html>
 
 
 
